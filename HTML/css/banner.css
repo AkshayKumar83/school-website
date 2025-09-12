@@ -1,0 +1,93 @@
+#slides, #slideshome {
+width:738px; height:300px; float:left; position:relative; z-index:0; 
+}
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	If height not specified height will be set by the slide content
+	Set to display none, prevents content flash
+*/
+.slides_container {
+	width:738px;
+	height:300px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+	z-index:0;
+}
+.slides_control {z-index:0;}
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	Offeset for the 20px of padding
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+#slides .slide {
+	padding:0px;
+	width:738px;
+	height:300px;
+	display:block;
+	z-index:1 !important;
+}
+.slides_container div.slide {width:738px; height:300px; display:inline-block;}
+.slides_container div.content { float:left; width:308px; height:300px; overflow:auto; background:url(../images/banner-right.png) no-repeat top right; padding:15px; background-size: 100% 100%; }
+.slides_container div img { border:none; float:left; height:300px; width:400px; }
+p.bannerHead {color:#333333; font-size:18px; font-family:'opensans-bold'; text-transform:uppercase; line-height:22px; padding-bottom:18px;}
+p.bannerText {color:#666;}
+/*
+	Next/prev buttons
+*/
+#slides .next, #slideshome .next {
+	position:absolute;
+	bottom:20px;
+	right:0px;
+	width:51px;
+	height:51px;
+	display:block;
+	z-index:101;
+	background:url(../images/navbuttons.png) no-repeat -51px 0;
+	font-size:0px;
+}
+#slides .next:hover, #slideshome .next:hover {
+	background:url(../images/navbuttons.png) no-repeat -51px -51px;
+}
+#slides .prev, #slideshome .prev{
+	position:absolute;
+	bottom:20px;
+	left:0px;
+	width:51px;
+	height:51px;
+	display:block;
+	z-index:101;
+	background:url(../images/navbuttons.png) no-repeat 0px 0;
+	font-size:0px;
+}
+#slides .prev:hover, #slideshome .prev:hover {
+	background:url(../images/navbuttons.png) no-repeat 0px -51px;
+}
+/*
+	Pagination
+*/
+ul.pagination {	display:block; cursor:pointer; position:absolute; bottom:22px; left:515px; width:230px; height:15px; z-index:5; }
+ul.pagination li {float:left;}
+ul.pagination li a { display:inline-block; width:18px; height:18px; background:transparent url(../images/banner-bullet.png) no-repeat 0 0; float:left; overflow:hidden; vertical-align:middle; cursor:pointer; margin-right:6px; font-size:0px;}
+ul.pagination li a:hover { background-position:0 -18px; font-size:0px; }
+ul.pagination li.current a{ background-position:0 -18px; font-size:0px; }
+ul.pagination li.current a:hover { background-position:0 -18px; font-size:0px; }
+
+#slides2 {width:224px; float:left; position:relative; margin-top:20px;}
+#slides2 .slides_container { width:224px; display:none; height:182px;}
+#slides2 .slides_control {height:182px;}
+#slides2 .slides_container div { width:176px; display:block; float:left; height:182px; padding-left:12px;}
+#slides2 .slides_container div img { border:none; float:left; height:123px; width:176px; padding-bottom:10px;}
+#slides2 .slides_container div p{margin-top:15px; text-align:center;}
+#slides2 .slides_container div p span{margin-top:15px; text-align:center; text-transform:uppercase; color:#af7501; display:block;}
+*+ html #slides2 .slides_container div p{margin-top:11px;}
+
+#slides2 a.prev {position:absolute; width:22px; height:22px; background:url(../images/tourist-action.png) no-repeat 0 0 ; top:139px; cursor:pointer; z-index:9999; display:block; text-indent: -9999px; float:left; display:block; outline:none;}
+#slides2 a.prev:hover {background:url(../images/tourist-action.png) no-repeat 0 -23px ;}
+#slides2 a.next {position:absolute; width:22px; height:22px; background:url(../images/tourist-action.png) no-repeat -30px 0 ; top:139px; cursor:pointer; right:0px; z-index:9999; text-indent: -9999px; float:left; display:block; outline:none;}
+#slides2 a.next:hover {background:url(../images/tourist-action.png) no-repeat -30px -23px ;}
