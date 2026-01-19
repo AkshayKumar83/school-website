@@ -1,0 +1,38 @@
+
+
+[
+    
+    {
+        "year": "2025",
+        "files": [
+            {"src": "../videos/2025/facebook1.mp4", "title": "Bhashan Partiyogita" },
+            {"src": "../videos/2025/videos1.mp4", "title": "Holi Function" },
+            {"src": "../videos/2025/videos2.mp4", "title": "Shiv Tandav" },
+            {"src": "../videos/2025/videos3.mp4", "title": "Yoga Day" },
+            {"src": "../videos/2025/videos5.mp4", "title": "Activity"},
+            {"src": "../videos/2025/videos6.mp4", "title": "Activity"},
+            {"src": "../videos/2025/videos12.mp4", "title": "Activity"},
+            {"src": "../videos/2025/videos13.mp4", "title": "Activity"},
+            {"src": "../videos/2025/videos14.mp4", "title": "Activity"},
+            {"src": "../videos/2025/videos15.mp4", "title": "Sword game"},
+            {"src": "../videos/2025/videos16.mp4", "title": "Activity"},
+            {"src": "../videos/2025/videos17.mp4", "title": "Activity"},
+            {"src": "../videos/2025/videos18.mp4", "title": "Activity"},
+            {"src": "../videos/2025/videos19.mp4", "title": "Activity"},
+            {"src": "../videos/2025/videos20.mp4", "title": "Independence Day"}
+            
+        ]
+    },
+    {
+        "year": "2024",
+        "files": [
+            { "src": "../videos/2024/facebook1.mp4", "title": "Bhashan Partiyogita" },
+            { "src": "../videos/2024/videos1.mp4", "title": "Holi Function" },
+            { "src": "../videos/2024/videos2.mp4", "title": "Shiv Tandav" },
+            { "src": "../videos/2024/videos3.mp4", "title": "Yoga Day" },
+            { "src": "../videos/2024/videos5.mp4", "title": "Activity" }
+        ]
+       
+    }
+   
+]

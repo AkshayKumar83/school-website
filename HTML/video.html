@@ -12,7 +12,6 @@
 <script type="text/javascript" src="js/slides.min.jquery.js"></script>
 <script type="text/javascript" src="js/jquery.roundabout.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
-<script src="js/photo.js" defer></script>
 </head>
 <body>
      <div id="wrapper">
@@ -101,9 +100,9 @@
                     </div>
                 </div>
             </li>
-            <li><a href="news.html" title="Trade Enquiry">News</a></li>
-            <li><a href="hiring.html" title="Statistics">New Hireing</a></li>
-            <li><a href="studentform.html" title="Resources">Student cornerforms</a></li>
+            <li><a href="studentform.html" title="Trade Enquiry">Toppers</a></li>
+            <li><a href="hiring.html" title="Statistics">New Hiring</a></li>
+            <li><a href="news.html" title="Resources">News</a></li>
        
         </ul>
         <!-- nav part end here -->
@@ -115,39 +114,193 @@
 
     <div class="mainWidth marTop25" style="display: flex; justify-content: space-between; padding-right: 2rem; background-color: #0f5f17; align-items: center; padding: 10px 0px;">
          <div >
-         <h2 style="color: white; padding-inline: 10px;"> Image Gallery - <span class="imageheading" style="text-transform: uppercase;">ALL</span> </h2> 
+         <h2 style="color: white; padding-inline: 10px;"> Video Gallery - <span class="imageheading" style="text-transform: uppercase;">ALL</span> </h2> 
       </div>
         <div style="display: flex; margin-right: 20px; align-items: center;">
         <span style="color: white; padding-right: 2%; width: 80px; font-size: medium;"><b>Sort by :</b></span>
-         <select id="yearFilter" class="photoselect">
+         <!-- <select id="yearFilter" class="photoselect">
     <option value="all">All</option>
     <option value="2025">2025</option>
     <option value="2024">2024</option>
     <option value="2023">2023</option>
-    <option value="2025">2022</option>
-    <option value="2024">2021</option>
-    <option value="2023">2020</option>
-  </select>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+  </select> -->
+  <select id="yearFilter" class="photoselect">
+    <option value="all">All</option>
+</select>
   </div>
     </div>
     </div>
 
 
     <div class="mainWidth marTop25">
-        <ul class="photolist">
-            <li data-year="2025">
-      <video width="300" height="300" controls>
-  <source src="videos/facebook1.mp4" type="video/mp4">
-  
- 
-</video>
-      <p>Bhashan Partiyogita </p>
-      <span>16 Aug 2025</span>
-    </li>
-
+        <ul class="photolist videolist" id="videoList">
+            <!-- Videos will be loaded dynamically from video.json -->
         </ul>
     </div>
 
+    <!-- <script>
+        // Load videos from video.json
+        fetch("../../video.json")
+            .then(res => res.json())
+            .then(data => {
+                const videoList = document.getElementById("videoList");
+                let videoHTML = "";
+
+                data.forEach(yearData => {
+                    // yearData.files.forEach((videoPath, index) => {
+                    //     const fileName = videoPath.split('/').pop().replace('.mp4', '');
+                    //     const videoTitle = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/([A-Z])/g, ' $1').trim();
+                     
+                    yearData.files.forEach(file => {
+                        const videoPath = file.src;
+                        const videoTitle = file.title;
+
+                        videoHTML += `
+                            <li data-year="${yearData.year}">
+                                <video width="200" height="200" controls>
+                                    <source src="${videoPath}" type="video/mp4">
+                                </video>
+                                <p>${videoTitle}</p>
+                            </li>
+                        `;
+                    });
+                });
+
+                videoList.innerHTML = videoHTML;
+                
+                // Initialize year filter for videos
+               const yearFilter = document.getElementById("yearFilter");
+
+                    // Add years dynamically (deduplicate)
+                  const addedYears = new Set(['all']); // Track already-added years
+data.forEach(yearData => {
+    if (!addedYears.has(yearData.year)) {
+        let opt = document.createElement("option");
+        opt.value = yearData.year;
+        opt.textContent = yearData.year;
+        yearFilter.appendChild(opt);
+        addedYears.add(yearData.year);
+    }
+});
+
+// Mark yearFilter as populated so photo.js won't override it
+yearFilter.dataset.populated = 'true';
+
+// Auto-select current year
+const currentYear = new Date().getFullYear();
+
+// If dropdown contains current year, select it
+if ([...yearFilter.options].some(opt => opt.value == currentYear)) {
+    yearFilter.value = currentYear;
+} else {
+    // Otherwise select the last year from JSON (latest)
+    const lastYear = data[data.length - 1].year;
+    yearFilter.value = lastYear;
+}
+
+// Change heading
+const heading = document.querySelector(".imageheading");
+heading.textContent = yearFilter.value;
+
+// Apply filter immediately
+yearFilter.dispatchEvent(new Event("change"));
+
+
+                const videoItems = document.querySelectorAll(".photolist li");
+                
+                if (yearFilter) {
+                    yearFilter.addEventListener("change", function () {
+                        const selectedYear = this.value;
+                        const heading = document.querySelector(".imageheading");
+                        if (heading) {
+                            heading.textContent = selectedYear;
+                        }
+
+                        videoItems.forEach(item => {
+                            const itemYear = item.getAttribute("data-year");
+                            if (selectedYear === "all" || itemYear === selectedYear) {
+                                item.style.display = "flex";
+                            } else {
+                                item.style.display = "none";
+                            }
+                        });
+                    });
+                }
+            })
+            .catch(error => {
+                console.error("Error loading videos:", error);
+            });
+    </script> -->
+
+<script>
+fetch("../../video.json")
+  .then(res => res.json())
+  .then(data => {
+
+    /* 1️⃣ latest year upar lane ke liye sort */
+    data.sort((a, b) => Number(b.year) - Number(a.year));
+
+    const videoList = document.getElementById("videoList");
+    const yearFilter = document.getElementById("yearFilter");
+    const heading = document.querySelector(".imageheading");
+
+    /* 2️⃣ saare videos render */
+    let html = "";
+    data.forEach(yearData => {
+      yearData.files.forEach(file => {
+        html += `
+          <li data-year="${yearData.year}">
+            <video width="200" height="200" controls>
+              <source src="${file.src}" type="video/mp4">
+            </video>
+            <p>${file.title}</p>
+          </li>
+        `;
+      });
+    });
+    videoList.innerHTML = html;
+
+    /* 3️⃣ dropdown fill */
+    yearFilter.innerHTML = `<option value="all">All</option>`;
+    data.forEach(y => {
+      const opt = document.createElement("option");
+      opt.value = y.year;
+      opt.textContent = y.year;
+      yearFilter.appendChild(opt);
+    });
+
+    /* 4️⃣ default year select (current → else latest) */
+    const currentYear = new Date().getFullYear().toString();
+    yearFilter.value = data.some(y => y.year === currentYear)
+      ? currentYear
+      : data[0].year;
+
+    heading.textContent = yearFilter.value;
+
+    /* 5️⃣ filter function */
+    function applyFilter() {
+      const selectedYear = yearFilter.value;
+      heading.textContent = selectedYear;
+
+      document.querySelectorAll("#videoList li").forEach(item => {
+        const itemYear = item.getAttribute("data-year");
+        item.style.display =
+          selectedYear === "all" || itemYear === selectedYear
+            ? "flex"
+            : "none";
+      });
+    }
+
+    /* 6️⃣ event + initial filter */
+    yearFilter.addEventListener("change", applyFilter);
+    applyFilter(); // page load pe bhi apply
+
+  })
+  .catch(err => console.error("Video load error:", err));
+</script>
 
 
     <div class="mainWidth marTop25">

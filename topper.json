@@ -1,0 +1,50 @@
+[
+    {
+        "year": "2025",
+        "name": "Payal",
+        "description": "Class 12th 9th position in HP board (2024-2025)",
+        "thumbnail": "../Toppers/2025/Payal/Thumnail.jpg",
+        "gallery": [
+            "../Toppers/2025/Payal/payal1.jpg",
+            "../Toppers/2025/Payal/payal2.jpg",
+            "../Toppers/2025/Payal/payal3.jpg"
+        ]
+    },
+
+    {
+        "year": "2025",
+        "name": "Sania Thakur",
+        "description": "Class 10th State Topper (2024-2025)",
+        "thumbnail": "../Toppers/2025/Sania Thakur/thumnail.jpg",
+        "gallery": [
+            "../Toppers/2025/Sania Thakur/10th1.jpg",
+            "../Toppers/2025/Sania Thakur/10th2.jpg",
+            "../Toppers/2025/Sania Thakur/10th3.jpg",
+            "../Toppers/2025/Sania Thakur/10th4.jpg",
+            "../Toppers/2025/Sania Thakur/carousal1.jpg",
+            "../Toppers/2025/Sania Thakur/gallery1.jpg",
+            "../Toppers/2025/Sania Thakur/gallery2.jpg",
+            "../Toppers/2025/Sania Thakur/gallery3.jpg",
+            "../Toppers/2025/Sania Thakur/saina thakur.jpg"
+        ]
+    },
+    {
+        "year": "2024",
+        "name": "Kritika Sharma",
+        "description": "Class 10th 2nd State Topper (2023-2024)",
+        "thumbnail": "../Toppers/2024/Kritika Sharma/Thumnail.jpg",
+        "gallery": [
+            "../Toppers/2024/Kritika Sharma/carousal2.jpg",
+            "../Toppers/2024/Kritika Sharma/gallery4.jpg",
+            "../Toppers/2024/Kritika Sharma/kritika1.jpg",
+            "../Toppers/2024/Kritika Sharma/kritika2.jpg",
+            "../Toppers/2024/Kritika Sharma/kritika3.jpg",
+            "../Toppers/2024/Kritika Sharma/kritika5.jpg",
+            "../Toppers/2024/Kritika Sharma/kritika6.jpg",
+            "../Toppers/2024/Kritika Sharma/kritika7.jpg",
+            "../Toppers/2024/Kritika Sharma/kritika8.jpg",
+            "../Toppers/2024/Kritika Sharma/kritika9.jpg"
+        ]
+    }
+]
+

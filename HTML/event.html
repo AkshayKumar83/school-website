@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Neugal Public School Bhawarna</title>
+<meta name="description" content="Neugal public school bhawarna" /> 
+<meta name="keywords" content="Neugal public school bhawarna" />
+<link rel="stylesheet" type="text/css" href="css/style.css"  />
+<link rel="stylesheet" type="text/css" href="css/banner.css"  />
+<link rel="stylesheet" type="text/css" href="css/gallery.css"  />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/slides.min.jquery.js"></script>
+<script type="text/javascript" src="js/jquery.roundabout.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script src="js/photo.js" defer></script>
+</head>
+<body>
+     <div id="wrapper">
+        <div class="main header">
+    	<!-- logo part start here -->
+        <div class="logo"><img src="images/logo.jpg" height="70px" alt="Agricultural &amp; Processed Food Products Export Development Authority" title="Agricultural &amp; Processed Food Products Export Development Authority" style="border-radius: 50%;" />
+            <h1 style="color: green;">Neugal Public School <span style="margin-top: 10px;">Bhawarna</span></h1>
+        </div>        <!-- logo part end here -->
+        <div class="topRgtPart">
+        	<!-- social link start here -->
+        	<ul class="social">
+            	<li><a href="https://x.com/" target="_blank" title="Twitter"><img src="images/twitter.jpg" alt="Twitter" /></a></li>
+                <li><a href="https://www.facebook.com/p/Neugal-public-school-Bhawarna-100057362473329/" target="_blank" title="Facebook"><img src="images/facebook.jpg" alt="Facebook" /></a></li>
+                <li><a href="https://www.google.com/" target="_blank" title="Google Plus"><img src="images/google-plus.jpg" alt="Google Plus" /></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank" title="YouTube"><img src="images/youtube.jpg" alt="YouTube" /></a></li>
+            </ul>
+            <!-- social link end here -->
+            
+            <!-- top link start here -->
+        	<ul class="topLink">
+            	<li><a href="index.html" title="Home" class="home">Home</a></li>
+                <li><a href="about.html" title="About">About</a></li>
+                <li><a href="contact.html" title="Contact">Contact</a></li>
+                
+            </ul>
+            <!-- top link end here -->
+        </div>
+        </div>
+
+        <div class="mainWidth navPart">
+    	        
+        <!-- nav part start here -->
+        <ul class="mainNav">
+        	<li><a href="index.html" title="Industry">Home</a>
+            </li>
+            <li><a href="director.html" title="Exports">Directors/ Principal Person</a>
+            </li>
+            <li><a href="staff.html" title="News">School Staff</a></li>
+            <li><a href="#" title="Tenders">Gallery</a>
+                <div class="sub_menu sub_menu01 " style="width: 80px ;">
+                    <div class="menu">
+                      <ul class="sublinks">
+                        <li><a href="photo.html">photo Gallery</a></li>
+                        <li><a href="video.html">Video gallery</a></li>
+                     
+                      </ul>
+                    </div>
+                </div>
+            </li>
+            <li><a href="studentform.html" title="Trade Enquiry">Toppers</a></li>
+            <li><a href="hiring.html" title="Statistics">New Hiring</a></li>
+            <li><a href="news.html" title="Resources">News</a></li>
+       
+        </ul>
+        <!-- nav part end here -->
+    </div>
+
+
+    <div class="mainWidth marTop25" >
+          <h1 style="color: #ed1b24; text-align: center;" id="eventTitle">Event Gallery</h1>
+    </div>
+
+    <div class="mainWidth marTop25"  style="display: flex; justify-content: space-between; padding-right: 2rem; background-color: #0f5f17; align-items: center; padding: 10px 0px;">
+        <div >
+         <h2 style="color: white; padding-inline: 10px;"> Image Gallery - <span class="imageheading" style="text-transform: uppercase;">ALL</span> </h2> 
+      </div>
+      <div style="display: flex; margin-right: 20px; align-items: center;">
+        <span style="color: white; padding-right: 2%; width: 80px; font-size: medium;"><b>Sort by :</b></span>
+         <select id="yearFilter" class="photoselect">
+    <option value="all">All</option>
+    <option value="2025">2025</option>
+    <option value="2024">2024</option>
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+  </select>
+  </div>
+    </div>
+
+    <div class="mainWidth marTop25">
+   <ul class="photolist" id="photoList"></ul>
+    </div>
+
+     <div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <button class="btn prev" id="prevBtn">&#10094;</button>
+    <img id="lightboxImg" src="" alt="Preview">
+    <button class="btn next" id="nextBtn">&#10095;</button>
+  </div>
+
+
+    <div class="mainWidth marTop25">
+    	<div class="footer">
+        	<ul class="footerLinks">
+            	<li class="fotHome"><a href="index.html">Home</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html" class="noBdr">Feedback</a></li>
+            </ul>
+        </div>
+        <p class="copyright">Copyright © 2014. All Rights Reserved by Neugal-public-school-Bhawarna</p>
+    </div>
+
+    </div>
+    <script>
+// Get event name from URL parameter
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+const eventName = getUrlParameter('event');
+
+if (!eventName) {
+    // If no event parameter, redirect to photo gallery
+    window.location.href = 'photo.html';
+} else {
+    fetch("../../photos.json")
+      .then(res => res.json())
+      .then(data => {
+        const gallery = data.find(g => g.event === eventName);
+
+        if (!gallery) {
+            // Event not found, redirect to photo gallery
+            alert('Event not found. Redirecting to photo gallery.');
+            window.location.href = 'photo.html';
+            return;
+        }
+
+        // Update page title
+        document.getElementById("eventTitle").textContent = gallery.title;
+        document.title = gallery.title + " - Neugal Public School Bhawarna";
+
+        const yearFilter = document.getElementById("yearFilter");
+        const list = document.getElementById("photoList");
+
+        // Get available years from the gallery
+        const availableYears = gallery.years.map(y => y.year).sort().reverse();
+        
+        // Update year filter options (mark as populated so global script won't override)
+        const yearFilterSelect = document.getElementById("yearFilter");
+        yearFilterSelect.innerHTML = '<option value="all">All</option>';
+        availableYears.forEach(year => {
+          const option = document.createElement('option');
+          option.value = year;
+          option.textContent = year;
+          yearFilterSelect.appendChild(option);
+        });
+        yearFilterSelect.dataset.populated = 'true';
+
+        function loadPhotos(year = "all") {
+          list.innerHTML = "";
+
+          if (gallery.years.length === 0) {
+            list.innerHTML = '<li style="text-align: center; padding: 20px; color: #666;">No photos available for this event.</li>';
+            return;
+          }
+
+          gallery.years.forEach(y => {
+            if (year === "all" || y.year === year) {
+              if (y.photos && y.photos.length > 0) {
+                y.photos.forEach(img => {
+                  list.innerHTML += `
+                    <li data-year="${y.year}">
+                      <img src="${img}" width="200" height="200" alt="${gallery.title}">
+                    </li>
+                  `;
+                });
+              }
+            }
+          });
+
+          // If no photos found, show message
+          if (list.innerHTML === "") {
+            list.innerHTML = '<li style="text-align: center; padding: 20px; color: #666;">No photos available for the selected year.</li>';
+          }
+        }
+
+        // Choose default year: prefer current year if available, otherwise most recent
+        const currentYear = new Date().getFullYear().toString();
+        const defaultYear = availableYears.includes(currentYear) ? currentYear : (availableYears.length > 0 ? availableYears[0] : 'all');
+        loadPhotos(defaultYear);
+        yearFilter.value = defaultYear;
+        document.querySelector(".imageheading").textContent = (defaultYear === 'all') ? 'ALL' : defaultYear.toUpperCase();
+
+        yearFilter.addEventListener("change", function () {
+          const selectedYear = this.value;
+          document.querySelector(".imageheading").textContent = selectedYear.toUpperCase();
+          loadPhotos(selectedYear);
+        });
+
+      })
+      .catch(error => {
+        console.error('Error loading photos:', error);
+        document.getElementById("photoList").innerHTML = '<li style="text-align: center; padding: 20px; color: #666;">Error loading photos. Please try again later.</li>';
+      });
+}
+</script>
+</body>
+</html>
+

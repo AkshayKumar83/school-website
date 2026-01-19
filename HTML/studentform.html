@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css"  />
 <link rel="stylesheet" type="text/css" href="css/banner.css"  />
 <link rel="stylesheet" type="text/css" href="css/gallery.css"  />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/slides.min.jquery.js"></script>
 <script type="text/javascript" src="js/jquery.roundabout.min.js"></script>
@@ -101,9 +102,9 @@
                     </div>
                 </div>
             </li>
-            <li><a href="news.html" title="Trade Enquiry">News</a></li>
-            <li><a href="hiring.html" title="Statistics">New Hireing</a></li>
-            <li><a href="studentform.html" title="Resources">Student cornerforms</a></li>
+            <li><a href="studentform.html" title="Trade Enquiry">Toppers</a></li>
+            <li><a href="hiring.html" title="Statistics">New Hiring</a></li>
+            <li><a href="news.html" title="Resources">News</a></li>
        
         </ul>
         <!-- nav part end here -->
@@ -111,8 +112,246 @@
 
 
     <div class="mainWidth marTop25">
-        <p style="font-size: 2rem; text-align: center; color: red;">Comming Soon ......</p>
+        <h1 style="color: #ed1b24; text-align: center;"> Toppers</h1>
     </div>
+
+    <div class="mainWidth marTop25">
+        <figure>
+            <img src="../Toppers/All_toppers_banner.jpg" alt="Topper image" width="100%" style="aspect-ratio: 16/9;">
+        </figure>
+    </div>
+
+    <div class="mainWidth marTop25"  style="display: flex; justify-content: space-between; padding-right: 2rem; background-color: #0f5f17; align-items: center; padding: 10px 0px;">
+        <div >
+         <h2 style="color: white; padding-inline: 10px;">Toppers - <span class="imageheading" style="text-transform: uppercase;">ALL</span> </h2> 
+      </div>
+      <div style="display: flex; margin-right: 20px; align-items: center;">
+        <span style="color: white; padding-right: 2%; width: 80px; font-size: medium;"><b>Sort by :</b></span>
+         <select id="yearFilter" class="photoselect">
+    <option value="all">All</option>
+    <option value="2025">2025</option>
+    <option value="2024">2024</option>
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+  </select>
+  </div>
+    </div>
+
+    <div class="mainWidth marTop25">
+        <div class="imagegrouping" id="topperContainer">
+                <!-- Toppers will be loaded dynamically from topper.json -->
+        </div>
+        
+        <script>
+            fetch("../../topper.json")
+                .then(res => res.json())
+                .then(data => {
+                    const container = document.getElementById("topperContainer");
+                    let topperHTML = "";
+                    
+                    // Sort by year (newest first), then by name
+                    const sortedData = data.sort((a, b) => {
+                        if (b.year !== a.year) {
+                            return b.year.localeCompare(a.year);
+                        }
+                        return a.name.localeCompare(b.name);
+                    });
+                    
+                    sortedData.forEach(topper => {
+                        // Create a URL-friendly name parameter
+                        const nameParam = encodeURIComponent(topper.name.toLowerCase().replace(/\s+/g, '-'));
+                        
+                        // include the clicked thumbnail path as an `img` parameter so topper page can show that image
+                        const imgParam = encodeURIComponent(topper.thumbnail);
+                        topperHTML += `
+                            <div class="particulargroup" data-year="${topper.year}">
+                                <a href="topper.html?name=${nameParam}&img=${imgParam}">
+                                    <img src="${topper.thumbnail}" alt="${topper.name}" style="aspect-ratio: 12/9; width:100%">
+                                    <div class="grouptitle">
+                                        <h2 style="text-align: center;">${topper.name}</h2>
+                                        <h2 style="text-align: center; font-size: small;">${topper.description}</h2>
+                                        <p style="text-align: center; color: white;">View More <i class="fa-solid fa-arrow-right" style="color: white;"></i></p>
+                                    </div>
+                                </a>
+                            </div>
+                        `;
+                    });
+                    
+                    container.innerHTML = topperHTML;
+
+                    // Initialize year filter for toppers listing
+                    const yearFilter = document.getElementById("yearFilter");
+                    if (yearFilter) {
+                        // Populate year options dynamically and deduplicate
+                        const years = Array.from(new Set(data.map(t => t.year))).sort().reverse();
+                        // Reset options keeping 'All'
+                        yearFilter.innerHTML = '<option value="all">All</option>';
+                        years.forEach(y => {
+                            const opt = document.createElement('option');
+                            opt.value = y;
+                            opt.textContent = y;
+                            yearFilter.appendChild(opt);
+                        });
+
+                        // Mark as populated so global scripts don't override
+                        yearFilter.dataset.populated = 'true';
+
+                        // Default to 'All' and show all items
+                        yearFilter.value = 'all';
+
+                        // Event handler for filtering
+                        yearFilter.addEventListener("change", function () {
+                            const selectedYear = this.value;
+                            const heading = document.querySelector(".imageheading");
+                            if (heading) {
+                                heading.textContent = selectedYear.toUpperCase();
+                            }
+
+                            const topperItems = document.querySelectorAll("#topperContainer .particulargroup");
+                            topperItems.forEach(item => {
+                                const itemYear = item.getAttribute("data-year");
+                                if (selectedYear === "all" || itemYear === selectedYear) {
+                                    item.style.display = "block";
+                                } else {
+                                    item.style.display = "none";
+                                }
+                            });
+                        });
+
+                        // Trigger to apply default
+                        yearFilter.dispatchEvent(new Event('change'));
+                    }
+                })
+                .catch(error => {
+                    console.error("Error loading toppers:", error);
+                    document.getElementById("topperContainer").innerHTML = '<li style="text-align: center; padding: 20px; color: #666;">Error loading toppers. Please try again later.</li>';
+                });
+        </script>
+    <!-- <ul class="photolist">
+         <li data-year="2025" >
+        <img src="images/10th2.jpg" alt="toppers" height="200px" width="200px">
+        <p >Sania Thakur</p>
+        <span>(2024-2025)</span>
+    </li>
+      <li data-year="2025">
+        <img src="images/10th1.jpg" alt="Topper images" height="200px" width="200px">
+        <p >Sania Thakur</p>
+        <span>(2024-2025)</span>
+    </li>
+    <li data-year="2025">
+        <img src="images/10th2.jpg" alt="Topper images" height="200px" width="200px">
+        <p >Sania Thakur</p>
+        <span>(2024-2025)</span>
+    </li>
+    <li data-year="2025">
+        <img src="images/10th3.jpg" alt="Topper images" height="200px" width="200px">
+        <p >Sania Thakur</p>
+        <span>(2024-2025)</span>
+    </li>
+            <li data-year="2025">
+      <img src="images/carousal1.jpg" width="200px" height="200px" alt="Topper images" />
+      <p >Sania Thakur</p>
+        <span>(2024-2025)</span>
+    </li>
+   
+    <li data-year="2025">
+        <img src="images/gallery1.jpg" alt="Topper images" height="200px" width="200px">
+        <p >Sania Thakur</p>
+        <span>(2024-2025)</span>
+    </li>
+    <li data-year="2025">
+        <img src="images/gallery2.jpg" alt="Topper images" height="200px" width="200px">
+        <p >Sania Thakur</p>
+        <span>(2024-2025)</span>
+    </li>
+    <li data-year="2025">
+        <img src="images/gallery3.jpg" alt="Topper images" height="200px" width="200px">
+        <p >Sania Thakur</p>
+        <span>(2024-2025)</span>
+    </li>
+  
+    <li data-year="2025">
+        <img src="images/saina thakur.jpg" alt="Topper images" height="200px" width="200px">
+        <p >Sania Thakur</p>
+        <span>(2024-2025)</span>
+    </li>
+    <li data-year="2025">
+        <img src="images/banner-img.png" alt="Topper images" height="200px" width="200px">
+        <p >Sania Thakur</p>
+        <span>(2024-2025)</span>
+    </li>
+
+    <li data-year="2024">
+        <img src="images/carousal2.jpg" alt="Topper images" height="200px" width="200px">
+        <p>Kritika Sharma</p>
+        <span>(2023-2024)</span>
+    </li>
+     <li data-year="2024">
+        <img src="images/gallery4.jpg" alt="Topper images" height="200px" width="200px">
+        <p>Kritika Sharma</p>
+        <span>(2023-2024)</span>
+    </li>
+    <li data-year="2024">
+        <img src="images/kritika1.jpg" alt="topper images" height="200px" width="200px">
+        <p>Kritika Sharma</p>
+        <span>(2023-2024)</span>
+
+    </li>
+    <li data-year="2024">
+        <img src="images/kritika2.jpg" alt="topper images" height="200px" width="200px">
+        <p>Kritika Sharma</p>
+        <span>(2023-2024)</span>
+
+    </li>
+    <li data-year="2024">
+        <img src="images/kritika3.jpg" alt="topper images" height="200px" width="200px">
+        <p>Kritika Sharma</p>
+        <span>(2023-2024)</span>
+
+    </li>
+    <li data-year="2024">
+        <img src="images/kritika5.jpg" alt="topper images" height="200px" width="200px">
+        <p>Kritika Sharma</p>
+        <span>(2023-2024)</span>
+
+    </li>
+    <li data-year="2024">
+        <img src="images/kritika6.jpg" alt="topper images" height="200px" width="200px">
+        <p>Kritika Sharma</p>
+        <span>(2023-2024)</span>
+
+    </li>
+    <li data-year="2024">
+        <img src="images/kritika7.jpg" alt="topper images" height="200px" width="200px">
+        <p>Kritika Sharma</p>
+        <span>(2023-2024)</span>
+
+    </li>
+    <li data-year="2024">
+        <img src="images/kritika8.jpg" alt="topper images" height="200px" width="200px">
+        <p>Kritika Sharma</p>
+        <span>(2023-2024)</span>
+
+    </li>
+    
+    <li data-year="2024">
+        <img src="images/kritika9.jpg" alt="topper images" height="200px" width="200px">
+        <p>Kritika Sharma</p>
+        <span>(2023-2024)</span>
+
+    </li>
+    
+    </ul> -->
+    </div>
+
+     <div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <button class="btn prev" id="prevBtn">&#10094;</button>
+    <img id="lightboxImg" src="" alt="Preview">
+    <button class="btn next" id="nextBtn">&#10095;</button>
+  </div>
 
 
 

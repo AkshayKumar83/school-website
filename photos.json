@@ -1,0 +1,401 @@
+[
+
+       
+    {
+        "event":  "janmashtami",
+        "title":  "Janmashtami Day Celebration",
+        "thumbnail":  "../../photos/janmashtami/thumbnail.jpg",
+        "years":  [
+                       
+
+                      {
+                          "year":  "2025",
+                          "photos":  [
+                                         "../../photos/janmashtami/2025/janmashtamievent.jpg",
+                                         "../../photos/janmashtami/2025/janmashtamievent1.jpg",
+                                         "../../photos/janmashtami/2025/janmashtamievent2.jpg",
+                                         "../../photos/janmashtami/2025/janmashtamievent3.jpg",
+                                         "../../photos/janmashtami/2025/janmashtamievent4.jpg",
+                                         "../../photos/janmashtami/2025/janmashtamievent5.jpg",
+                                         "../../photos/janmashtami/2025/janmashtamievent6.jpg",
+                                         "../../photos/janmashtami/2025/janmashtamievent7.jpg"
+                                     ]
+                      },
+
+                      {
+                          "year":  "2024",
+                          "photos":  [
+                                         "../../photos/janmashtami/2024/janmashtamievent2.jpg",
+                                         "../../photos/janmashtami/2024/janmashtamievent3.jpg",
+                                         "../../photos/janmashtami/2024/janmashtamievent4.jpg",
+                                         "../../photos/janmashtami/2024/janmashtamievent5.jpg"
+                                     ]
+                      }
+
+                     
+                  ]
+    },
+
+    {
+        "event":  "independenceday",
+        "title":  "Independence Day Celebration",
+        "thumbnail":  "../../photos/independenceday/thumbnail.jpg",
+        "years":  [
+                      {
+                          "year":  "2025",
+                          "photos":  [
+                                         "../../photos/independenceday/2025/event3.jpg",
+                                         "../../photos/independenceday/2025/independenceday.jpg",
+                                         "../../photos/independenceday/2025/independenceday1.jpg",
+                                         "../../photos/independenceday/2025/independenceday2.jpg"
+                                     ]
+                      },
+                      {
+                          "year":  "2024",
+                          "photos":  [
+
+                                     ]
+                      }
+                  ]
+    },
+
+    {
+        "event":  "yogaday",
+        "title":  "Yoga Day Celebration",
+        "thumbnail":  "../../photos/yogaday/thumbnail.jpg",
+        "years":  [
+                      {
+                          "year":  "2025",
+                          "photos":  [
+                                         "../../photos/yogaday/2025/event2.jpg",
+                                         "../../photos/yogaday/2025/gallery12.jpg"
+                                     ]
+                      },
+                      {
+                          "year":  "2024",
+                          "photos":  [
+
+                                     ]
+                      }
+                  ]
+    },
+
+      {
+        "event":  "sword",
+        "title":  "The Art of the Sword",
+        "thumbnail":  "../../photos/sword/thumbnail.jpg",
+        "years":  [
+                      {
+                          "year":  "2025",
+                          "photos":  [
+                                         "../../photos/sword/2025/event1.jpg",
+                                         "../../photos/sword/2025/sword1.jpg",
+                                         "../../photos/sword/2025/sword2.jpg",
+                                         "../../photos/sword/2025/sword3.jpg",
+                                         "../../photos/sword/2025/sword4.jpg",
+                                         "../../photos/sword/2025/sword5.jpg",
+                                         "../../photos/sword/2025/sword6.jpg"
+                                     ]
+                      },
+                      {
+                          "year":  "2024",
+                          "photos":  [
+
+                                     ]
+                      }
+                  ]
+    },
+
+ 
+
+    {
+        "event":  "ganpati",
+        "title":  "Ganpati Puja",
+        "thumbnail":  "../../photos/ganpati/thumbnail.jpg",
+        "years":  [
+                      {
+                          "year":  "2025",
+                          "photos":  [
+                                         "../../photos/ganpati/2025/ganeshji1.jpg",
+                                         "../../photos/ganpati/2025/ganeshji10.jpg",
+                                         "../../photos/ganpati/2025/ganeshji2.jpg",
+                                         "../../photos/ganpati/2025/ganeshji3.jpg",
+                                         "../../photos/ganpati/2025/ganeshji4.jpg",
+                                         "../../photos/ganpati/2025/ganeshji5.jpg",
+                                         "../../photos/ganpati/2025/ganeshji6.jpg",
+                                         "../../photos/ganpati/2025/ganeshji7.jpg",
+                                         "../../photos/ganpati/2025/ganeshji8.jpg",
+                                         "../../photos/ganpati/2025/ganeshji9.jpg",
+                                         "../../photos/ganpati/2025/havanevent.jpg",
+                                         "../../photos/ganpati/2025/havanevent1.jpg",
+                                         "../../photos/ganpati/2025/havanevent2.jpg",
+                                         "../../photos/ganpati/2025/havanevent3.jpg"
+                                     ]
+                      },
+                      {
+                          "year":  "2024",
+                          "photos":  [
+
+                                     ]
+                      }
+                  ]
+    },
+       {
+        "event":  "award",
+        "title":  "Award Ceremony",
+        "thumbnail":  "../../photos/award/thumbnail.jpg",
+        "years":  [
+                      {
+                          "year":  "2025",
+                          "photos":  [
+                                         "../../photos/award/2025/award1.jpg",
+                                         "../../photos/award/2025/award10.jpg",
+                                         "../../photos/award/2025/award11.jpg",
+                                         "../../photos/award/2025/award12.jpg",
+                                         "../../photos/award/2025/award13.jpg",
+                                         "../../photos/award/2025/award14.jpg",
+                                         "../../photos/award/2025/award15.jpg",
+                                         "../../photos/award/2025/award16.jpg",
+                                         "../../photos/award/2025/award17.jpg",
+                                         "../../photos/award/2025/award18.jpg",
+                                         "../../photos/award/2025/award19.jpg",
+                                         "../../photos/award/2025/award2.jpg",
+                                         "../../photos/award/2025/award20.jpg",
+                                         "../../photos/award/2025/award21.jpg",
+                                         "../../photos/award/2025/award22.jpg",
+                                         "../../photos/award/2025/award23.jpg",
+                                         "../../photos/award/2025/award24.jpg",
+                                         "../../photos/award/2025/award3.jpg",
+                                         "../../photos/award/2025/award4.jpg",
+                                         "../../photos/award/2025/award5.jpg",
+                                         "../../photos/award/2025/award6.jpg",
+                                         "../../photos/award/2025/award7.jpg",
+                                         "../../photos/award/2025/award8.jpg",
+                                         "../../photos/award/2025/award9.jpg",
+                                         "../../photos/award/2025/carousal1.jpg",
+                                         "../../photos/award/2025/carousal2.jpg",
+                                         "../../photos/award/2025/gallery1.jpg",
+                                         "../../photos/award/2025/gallery2.jpg",
+                                         "../../photos/award/2025/gallery3.jpg",
+                                         "../../photos/award/2025/gallery4.jpg",
+                                         "../../photos/award/2025/gallery5.jpg",
+                                         "../../photos/award/2025/saina thakur.jpg",
+                                         "../../photos/award/2025/slide1.png",
+                                         "../../photos/award/2025/thunmail.jpg"
+                                     ]
+                      },
+                      {
+                          "year":  "2024",
+                          "photos":  [
+
+                                     ]
+                      }
+                  ]
+    },
+   {
+        "event":  "achievement",
+        "title":  "Achievement Celebration",
+        "thumbnail":  "../../photos/achievments/thumbnail.jpg",
+        "years":  [
+                      {
+                          "year":  "2025",
+                          "photos":  [
+                                         "../../photos/achievments/2025/10th1.jpg",
+                                         "../../photos/achievments/2025/10th4.jpg",
+                                         "../../photos/achievments/2025/achievment1.jpg",
+                                         "../../photos/achievments/2025/achievment2.jpg",
+                                         "../../photos/achievments/2025/achievment3.jpg",
+                                         "../../photos/achievments/2025/achievment4.jpg",
+                                         "../../photos/achievments/2025/achievment5.jpg",
+                                         "../../photos/achievments/2025/banner-img.png",
+                                         "../../photos/achievments/2025/carousal1.jpg",
+                                         "../../photos/achievments/2025/carousal2.jpg",
+                                         "../../photos/achievments/2025/fencingcompition.jpg",
+                                         "../../photos/achievments/2025/kritika1.jpg",
+                                         "../../photos/achievments/2025/kritika7.jpg",
+                                         "../../photos/achievments/2025/kritika8.jpg",
+                                         "../../photos/achievments/2025/saina thakur.jpg",
+                                         "../../photos/achievments/2025/sword3.jpg",
+                                         "../../photos/achievments/2025/sword4.jpg",
+                                         "../../photos/achievments/2025/sword5.jpg"
+                                     ]
+                      },
+                      {
+                          "year":  "2024",
+                          "photos":  [
+
+                                     ]
+                      }
+                  ]
+    },
+
+    {
+        "event":  "sportsday",
+        "title":  "Sports Day",
+        "thumbnail":  "../../photos/sportsday/thumbnail.jpg",
+        "years":  [
+                      {
+                          "year":  "2025",
+                          "photos":  [
+                                         "../../photos/sportsday/2025/event1.jpg",
+                                         "../../photos/sportsday/2025/event5.jpg",
+                                         "../../photos/sportsday/2025/gallery11.jpg",
+                                         "../../photos/sportsday/2025/gallery9.jpg",
+                                         "../../photos/sportsday/2025/sports1.jpg",
+                                         "../../photos/sportsday/2025/sports2.jpg",
+                                         "../../photos/sportsday/2025/sports3.jpg",
+                                         "../../photos/sportsday/2025/sword1.jpg",
+                                         "../../photos/sportsday/2025/sword6.jpg"
+                                     ]
+                      },
+                      {
+                          "year":  "2024",
+                          "photos":  [
+
+                                     ]
+                      }
+                  ]
+    },
+
+   
+
+    {
+        "event":  "awerness",
+        "title":  "Awareness Camp",
+        "thumbnail":  "../../photos/awerness/thumbnail.jpg",
+        "years":  [
+                      {
+                          "year":  "2025",
+                          "photos":  [
+                                         "../../photos/awerness/2025/awarnes1.jpg",
+                                         "../../photos/awerness/2025/awarnes2.jpg",
+                                         "../../photos/awerness/2025/awarnes3.jpg",
+                                         "../../photos/awerness/2025/awarnes4.jpg",
+                                         "../../photos/awerness/2025/awarnes5.jpg",
+                                         "../../photos/awerness/2025/awarnes6.jpg",
+                                         "../../photos/awerness/2025/awarnes7.jpg",
+                                         "../../photos/awerness/2025/earthquake1.jpg",
+                                         "../../photos/awerness/2025/earthquake2.jpg",
+                                         "../../photos/awerness/2025/earthquake3.jpg",
+                                         "../../photos/awerness/2025/sword6.jpg"
+                                     ]
+                      },
+                      {
+                          "year":  "2024",
+                          "photos":  [
+
+                                     ]
+                      }
+                  ]
+    },
+
+    {
+        "event":  "culture",
+        "title":  "Cultural Programs",
+        "thumbnail":  "../../photos/culture/thumbnail.jpg",
+        "years":  [
+                      {
+                          "year":  "2025",
+                          "photos":  [
+                                         "../../photos/culture/2025/cultural.jpg",
+                                         "../../photos/culture/2025/cultural1.jpg",
+                                         "../../photos/culture/2025/cultural10.jpg",
+                                         "../../photos/culture/2025/cultural11.jpg",
+                                         "../../photos/culture/2025/cultural2.jpg",
+                                         "../../photos/culture/2025/cultural3.jpg",
+                                         "../../photos/culture/2025/cultural4.jpg",
+                                         "../../photos/culture/2025/cultural5.jpg",
+                                         "../../photos/culture/2025/cultural6.jpg",
+                                         "../../photos/culture/2025/cultural7.jpg",
+                                         "../../photos/culture/2025/cultural8.jpg",
+                                         "../../photos/culture/2025/cultural9.jpg",
+                                         "../../photos/culture/2025/gallery10.jpg",
+                                         "../../photos/culture/2025/gallery11.jpg",
+                                         "../../photos/culture/2025/gallery14.jpg",
+                                         "../../photos/culture/2025/gallery15.jpg",
+                                         "../../photos/culture/2025/gallery16.jpg",
+                                         "../../photos/culture/2025/independenceday.jpg",
+                                         "../../photos/culture/2025/youthparliament.jpg"
+                                     ]
+                      },
+                      {
+                          "year":  "2024",
+                          "photos":  [
+
+                                     ]
+                      }
+                  ]
+    },
+      {
+        "event":  "activity",
+        "title":  "School Activities",
+        "thumbnail":  "../../photos/activity/thumbnail.jpg",
+        "years":  [
+                      {
+                          "year":  "2025",
+                          "photos":  [
+                                         "../../photos/activity/2025/awarnes2.jpg",
+                                         "../../photos/activity/2025/awarnes5.jpg",
+                                         "../../photos/activity/2025/chemistrylab.jpg",
+                                         "../../photos/activity/2025/event4.jpg",
+                                         "../../photos/activity/2025/gallery13.jpg",
+                                         "../../photos/activity/2025/gallery17.jpg",
+                                         "../../photos/activity/2025/gallery6.jpg",
+                                         "../../photos/activity/2025/gallery7.jpg",
+                                         "../../photos/activity/2025/gallery8.jpg",
+                                         "../../photos/activity/2025/physics.jpg",
+                                         "../../photos/activity/2025/ptm1.jpg",
+                                         "../../photos/activity/2025/ptm2.jpg",
+                                         "../../photos/activity/2025/ptm3.jpg",
+                                         "../../photos/activity/2025/schoolacticity1.jpg",
+                                         "../../photos/activity/2025/schoolacticity10.jpg",
+                                         "../../photos/activity/2025/schoolacticity11.jpg",
+                                         "../../photos/activity/2025/schoolacticity12.jpg",
+                                         "../../photos/activity/2025/schoolacticity13.jpg",
+                                         "../../photos/activity/2025/schoolacticity14.jpg",
+                                         "../../photos/activity/2025/schoolacticity15.jpg",
+                                         "../../photos/activity/2025/schoolacticity16.jpg",
+                                         "../../photos/activity/2025/schoolacticity17.jpg",
+                                         "../../photos/activity/2025/schoolacticity18.jpg",
+                                         "../../photos/activity/2025/schoolacticity19.jpg",
+                                         "../../photos/activity/2025/schoolacticity2.jpg",
+                                         "../../photos/activity/2025/schoolacticity20.jpg",
+                                         "../../photos/activity/2025/schoolacticity21.jpg",
+                                         "../../photos/activity/2025/schoolacticity22.jpg",
+                                         "../../photos/activity/2025/schoolacticity23.jpg",
+                                         "../../photos/activity/2025/schoolacticity24.jpg",
+                                         "../../photos/activity/2025/schoolacticity25.jpg",
+                                         "../../photos/activity/2025/schoolacticity26.jpg",
+                                         "../../photos/activity/2025/schoolacticity27.jpg",
+                                         "../../photos/activity/2025/schoolacticity28.jpg",
+                                         "../../photos/activity/2025/schoolacticity29.jpg",
+                                         "../../photos/activity/2025/schoolacticity3.jpg",
+                                         "../../photos/activity/2025/schoolacticity30.jpg",
+                                         "../../photos/activity/2025/schoolacticity31.jpg",
+                                         "../../photos/activity/2025/schoolacticity32.jpg",
+                                         "../../photos/activity/2025/schoolacticity33.jpg",
+                                         "../../photos/activity/2025/schoolacticity34.jpg",
+                                         "../../photos/activity/2025/schoolacticity35.jpg",
+                                         "../../photos/activity/2025/schoolacticity36.jpg",
+                                         "../../photos/activity/2025/schoolacticity4.jpg",
+                                         "../../photos/activity/2025/schoolacticity5.jpg",
+                                         "../../photos/activity/2025/schoolacticity6.jpg",
+                                         "../../photos/activity/2025/schoolacticity7.jpg",
+                                         "../../photos/activity/2025/schoolacticity8.jpg",
+                                         "../../photos/activity/2025/schoolacticity9.jpg"
+                                     ]
+                      },
+                      {
+                          "year":  "2024",
+                          "photos":  [
+
+                                     ]
+                      }
+                  ]
+    }
+        
+   
+
+ 
+    
+]
