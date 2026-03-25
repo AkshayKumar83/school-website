@@ -15,6 +15,49 @@
 <script type="text/javascript" src="js/common.js"></script>
 <script src="js/photo.js" defer></script>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("0jB7h_xsOMEqFZtlu");   //  Public Key
+})();
+
+function sendFeedback() {
+
+  const fullName = document.getElementById("fullname").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phonenumber").value;
+  const message = document.getElementById("textmsg").value;
+
+  if(!fullName || !email || !message){
+    alert("Fill Required fields  - Name, Email, Message");
+    return;
+  }
+
+  emailjs.send("service_pcjveul", "template_2rs0v79", {   // Service + Template
+    fullName: fullName,
+    name: fullName,  
+    email: email,
+    phone: phone,
+    message: message
+  })
+  .then(function(response) {
+      alert("Feedback sent successfully! Thank you for reaching out to us.");
+
+      // reset fields
+      document.getElementById("fullname").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("phonenumber").value = "";
+      document.getElementById("textmsg").value = "";
+  })
+  .catch(function(error) {
+    console.log("EmailJS Error:", error);
+    alert("Failed to send feedback - please try again later.");
+});
+
+}
+</script>
+
 <body>
     <div id="wrapper">
         <div class="main header">
@@ -162,7 +205,11 @@
                     <textarea name="text-msg" id="textmsg" rows="5" cols="33" placeholder="Enter your Message" class="fom_controls" style="width: 336px; padding: 15px; font-family:  Arial, Helvetica, sans-serif;;"></textarea>
                 </div>
                 <div style="margin-top: 2rem;">
-                    <button class="submitbtn" style="cursor: pointer;">Submit</button>
+                    <!-- <button class="submitbtn" style="cursor: pointer;">Submit</button> -->
+                     <button type="button" class="submitbtn" onclick="sendFeedback()" style="cursor: pointer;">
+  Submit
+</button>
+
                 </div>
             </form>
         </div>
